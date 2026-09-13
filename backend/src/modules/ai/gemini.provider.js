@@ -8,8 +8,13 @@ const config = require('../../config/env');
 class GeminiProvider {
   constructor() {
     this.apiKey = config.geminiApiKey || process.env.GEMINI_API_KEY || '';
-    this.candidateModels = ['gemini-flash-latest', 'gemini-3.6-flash', 'gemini-3.5-flash-lite'];
-    this.modelName = this.candidateModels[0];
+    this.candidateModels = [
+      'gemini-3.5-flash-lite',
+      'gemini-3.5-flash',
+      'gemini-flash-lite-latest',
+      'gemini-3.6-flash',
+      'gemini-flash-latest',
+    ];
   }
 
   /**

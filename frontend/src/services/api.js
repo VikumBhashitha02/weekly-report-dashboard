@@ -9,7 +9,7 @@ const api = axios.create({
     'Content-Type': 'application/json',
   },
   withCredentials: true, // Enables sending/receiving HTTP-only cookies
-  timeout: 10000,
+  timeout: 15000,
 });
 
 // Request interceptor for attaching auth token (for future phases)

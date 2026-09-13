@@ -10,7 +10,7 @@ export const aiService = {
    * @returns {Promise<{ success: boolean, data: { message: string, timestamp: string } }>}
    */
   chatWithAssistant: async (message) => {
-    return await api.post('/ai/chat', { message });
+    return await api.post('/ai/chat', { message }, { timeout: 60000 });
   },
 };
 
